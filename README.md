@@ -15,7 +15,7 @@ This is an official implementation of [xPatch: Dual-Stream Time Series Forecasti
 
 ## Model Overview
 
-E**X**ponential **Patch** (xPatch) is a novel dual-stream architecture that utilizes exponential decomposition.
+E**x**ponential **Patch** (xPatch) is a novel dual-stream architecture that utilizes exponential decomposition.
 
 ### Seasonal-Trend Decomposition
 
