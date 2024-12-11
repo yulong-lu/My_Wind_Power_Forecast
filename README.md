@@ -39,23 +39,23 @@ Dual-flow architecture consists of an MLP-based linear stream and a CNN-based no
 
 In the unified experimental settings, xPatch achieves the best averaged performance on 60% of the datasets using the MSE metric and 70% of the datasets using the MAE metric.
 
-<detail>
+<details>
 <summary>Long-term Forecasting with Unified Experimental Settings
 <p align="center">
 <img src="./figures/hyper-unified.png" alt="" align=center />
 </p>
-</detail>
+</details>
 
 ### Long-term Forecasting with Hyperparameter Search
 
 In the hyperparameter search settings, xPatch achieves the best averaged performance on 70% of the datasets using the MSE metric and 90% of the datasets using the MAE metric.
 
-<detail>
+<details>
 <summary>Long-term Forecasting with Hyperparameter Search
 <p align="center">
 <img src="./figures/hyper-search.png" alt="" align=center />
 </p>
-</detail>
+</details>
 
 ### Efficiency on Long Look-back Windows
 
