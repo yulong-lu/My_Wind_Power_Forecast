@@ -41,9 +41,7 @@ In the unified experimental settings, xPatch achieves the best averaged performa
 
 <details>
 <summary>Long-term Forecasting with Unified Experimental Settings
-<p align="center">
 <img src="./figures/hyper-unified.png" alt="" align=center />
-</p>
 </details>
 
 ### Long-term Forecasting with Hyperparameter Search
@@ -52,9 +50,7 @@ In the hyperparameter search settings, xPatch achieves the best averaged perform
 
 <details>
 <summary>Long-term Forecasting with Hyperparameter Search
-<p align="center">
 <img src="./figures/hyper-search.png" alt="" align=center />
-</p>
 </details>
 
 ### Efficiency on Long Look-back Windows
