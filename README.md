@@ -1,4 +1,6 @@
-# xPatch (AAAI 2025)
+<div align="center">
+  <h2><b> (AAAI25) xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition </b></h2>
+</div>
 
 <div align="center">
 
@@ -9,7 +11,7 @@
 
 </div>
 
-This is an official implementation of xPatch: [xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition](https://arxiv.org/).
+This is an official implementation of [xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition](https://arxiv.org/).
 
 ## Model Overview
 
@@ -111,10 +113,10 @@ If you have any questions or concerns, please contact us at stitsyuk@kaist.ac.kr
 If you find this repository useful in your research, please consider citing our paper as follows:
 
 ```
-@inproceedings{Stitsyuk-2024-xPatch,
+@inproceedings{Stitsyuk-2025-xPatch,
   title     = {xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition},
-  author    = {Artyom, Stitsyuk and
-               Jaesik, Choi},
+  author    = {Stitsyuk, Artyom and
+               Choi, Jaesik},
   booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
   year      = {2025}
 }
