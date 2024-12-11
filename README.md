@@ -87,7 +87,7 @@ You can adjust the hyperparameters based on your needs (e.g. different patch len
 
 ## Acknowledgement
 
-We appreciate the following github repos very much for their valuable code and effort:
+We appreciate the following github repos for their valuable code and effort:
 - Autoformer (https://github.com/thuml/Autoformer)
 - FEDformer (https://github.com/MAZiqing/FEDformer)
 - ETSformer (https://github.com/salesforce/ETSformer)
@@ -111,8 +111,7 @@ If you find this repository useful in your research, please consider citing our 
 ```
 @inproceedings{Stitsyuk-2025-xPatch,
   title     = {xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition},
-  author    = {Stitsyuk, Artyom and
-               Choi, Jaesik},
+  author    = {Stitsyuk, Artyom and Choi, Jaesik},
   booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
   year      = {2025}
 }
