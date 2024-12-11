@@ -19,12 +19,6 @@ E**X**ponential **Patch** (xPatch) is a novel dual-stream architecture that util
 
 ### Seasonal-Trend Decomposition
 
-**Simple Moving Average (SMA)** is the unweighted mean of the previous data points.
-
-<p align="center">
-<img src="./figures/sma.png" alt="" align=center />
-</p>
-
 **Exponential Moving Average (EMA)** is an exponential smoothing method that assigns greater weight to more recent data points while smoothing out older data.
 
 <p align="center">
@@ -32,6 +26,8 @@ E**X**ponential **Patch** (xPatch) is a novel dual-stream architecture that util
 </p>
 
 ### Architecture
+
+Dual-flow architecture consists of an MLP-based linear stream and a CNN-based non-linear stream.
 
 <p align="center">
 <img src="./figures/xpatch.png" alt="" align=center />
@@ -41,7 +37,7 @@ E**X**ponential **Patch** (xPatch) is a novel dual-stream architecture that util
 
 ### Long-term Forecasting with Unified Experimental Settings
 
-In the unified experimental settings, xPatch achieves the best averaged performance on 60% of the datasets using the MSE metric and 70% of the datasets using the MAE metric. Compared to CARD, xPatch surpasses it by 2.46% in MSE and 2.34% in MAE. Compared to TimeMixer, xPatch surpasses it by 3.34% in MSE and 6.34% in MAE. Compared to PatchTST, xPatch surpasses it by 4.76% in MSE and 6.20% in MAE.
+In the unified experimental settings, xPatch achieves the best averaged performance on 60% of the datasets using the MSE metric and 70% of the datasets using the MAE metric.
 
 <p align="center">
 <img src="./figures/hyper-unified.png" alt="" align=center />
@@ -49,7 +45,7 @@ In the unified experimental settings, xPatch achieves the best averaged performa
 
 ### Long-term Forecasting with Hyperparameter Search
 
-In the hyperparameter search settings, xPatch achieves the best averaged performance on 70% of the datasets using the MSE metric and 90% of the datasets using the MAE metric. Compared to CARD, xPatch surpasses it by 5.29% in MSE and 3.81% in MAE. Compared to TimeMixer, xPatch surpasses it by 7.45% in MSE and 7.85% in MAE. Compared to PatchTST, xPatch surpasses it by 7.87% in MSE and 8.59% in MAE.
+In the hyperparameter search settings, xPatch achieves the best averaged performance on 70% of the datasets using the MSE metric and 90% of the datasets using the MAE metric.
 
 <p align="center">
 <img src="./figures/hyper-search.png" alt="" align=center />
@@ -57,7 +53,7 @@ In the hyperparameter search settings, xPatch achieves the best averaged perform
 
 ### Efficiency on Long Look-back Windows
 
-In theory, a longer lookback window should increase the receptive field, potentially leading to improved forecasting performance. Here we explore the ability of different models to learn from a longer lookback window.
+We explore the ability of different models to learn from a longer lookback window.
 
 <p align="center">
 <img src="./figures/lookback.png" alt="" align=center />
@@ -79,12 +75,12 @@ We explore the impact of the dual flow network in xPatch architecture and assess
 
 1. Install requirements. ```pip install -r requirements.txt```
 
-2. Download data. You can download the all datasets from [Google Driver](https://drive.google.com/u/0/uc?id=1NF7VEefXCmXuWNbnNe858WvQAkJ_7wuP&export=download), [Baidu Driver](https://pan.baidu.com/share/init?surl=r3KhGd0Q9PJIUZdfEYoymg&pwd=i9iy) or [Kaggle Datasets](https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). **All the datasets are well pre-processed** and can be used easily. Create a seperate folder ```./dataset``` and put all the files in the directory.
+2. Download data. You can download the all datasets from [Google Driver](https://drive.google.com/u/0/uc?id=1NF7VEefXCmXuWNbnNe858WvQAkJ_7wuP&export=download), [Baidu Driver](https://pan.baidu.com/share/init?surl=r3KhGd0Q9PJIUZdfEYoymg&pwd=i9iy) or [Kaggle Datasets](https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). All the datasets are well pre-processed and can be used easily. Create a seperate folder ```./dataset``` and put all the files in the directory.
 
-3. Train the model. We provide the experiment scripts of all benchmarks under the folder `./scripts`. The model for unified settings is xPatch96, while for the hyperparameter search you can use xPatch336. You can reproduce the experiment results by:
+3. Train the model. We provide the experiment scripts of all benchmarks under the folder `./scripts`. The script for unified settings is *xPatch96*, while for the hyperparameter search you can use *xPatch336*. You can reproduce the experiment results by:
 
 ```
-bash ./scripts/xPatch96.sh
+bash scripts/xPatch96.sh
 ```
 
 You can adjust the hyperparameters based on your needs (e.g. different patch length, different look-back windows and prediction lengths, different alpha parameters for exponential decomposition). We also provide code for the baseline models and for ablation experiments from Appendix (EMA decomposition, arctangent loss, sigmoid learning rate adjustment scheme, inference time) in ```./ablation```.
