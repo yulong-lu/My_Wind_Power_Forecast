@@ -19,6 +19,12 @@ E**x**ponential **Patch** (xPatch) is a novel dual-stream architecture that util
 
 ### Seasonal-Trend Decomposition
 
+**Simple Moving Average (SMA)** is the unweighted mean of the previous data points.
+
+<p align="center">
+<img src="./figures/sma.png" alt="" style="width: 80%;" align=center />
+</p>
+
 **Exponential Moving Average (EMA)** is an exponential smoothing method that assigns greater weight to more recent data points while smoothing out older data.
 
 <p align="center">
