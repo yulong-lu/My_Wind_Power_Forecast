@@ -83,7 +83,7 @@ We explore the impact of the dual flow network in xPatch architecture and assess
 bash scripts/xPatch_unified.sh
 ```
 
-You can adjust the hyperparameters based on your needs (e.g. different patch length, different look-back windows and prediction lengths, different alpha parameters for exponential decomposition). We also provide code for the baseline models and for ablation experiments from Appendix (EMA decomposition, arctangent loss, sigmoid learning rate adjustment scheme, inference time) in ```./ablation```.
+All experiments were conducted on a single Quadro RTX 6000 GPU. You can adjust the hyperparameters based on your needs (e.g. batch size, patch length, lookback windows and prediction lengths, alpha parameter for exponential decomposition). We also provide code for the baseline models and for ablation experiments from Appendix (EMA decomposition, arctangent loss, sigmoid learning rate adjustment scheme, inference time) in ```./ablation```.
 
 ## Acknowledgement
 
