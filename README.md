@@ -30,7 +30,7 @@ E**x**ponential **Patch** (xPatch) is a novel dual-stream architecture that util
 Dual-flow architecture consists of an MLP-based linear stream and a CNN-based non-linear stream.
 
 <p align="center">
-<img src="./figures/xpatch.png" alt="" align=center />
+<img src="./figures/xpatch.png" alt="" style="width: 80%;" align=center />
 </p>
 
 ## Results
