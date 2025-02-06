@@ -79,16 +79,28 @@ We explore the impact of the dual flow network in xPatch architecture and assess
 <img src="./figures/dual-flow.png" alt="" style="width: 80%;" align=center />
 </p>
 
+## "Drop-last" trick
+
+Recent models have widely adopted the "drop-last" trick, which is well explained in the [TFB](https://www.vldb.org/pvldb/vol17/p2363-hu.pdf) paper. Since re-running all experiments for existing benchmark models without this trick would be highly complex and time-consuming, we chose to rely on the benchmark results reported in their official papers to ensure fair experimentation. These reported results incorporate all tricks and hyperparameter searches applied by the original authors. Our primary objective was to use these published results (even if they are not entirely fair) rather than re-conducting the benchmark experiments ourselves.
+
+However, the recent work [TFB](https://www.vldb.org/pvldb/vol17/p2363-hu.pdf) introduces a new and fair benchmark that excludes the "drop-last" trick. The authors fairly re-evaluated all existing models, including a comprehensive hyperparameter search. Therefore, we incorporate the results of xPatch fair experiments conducted without the "drop-last" trick by referencing the benchmark results from the new [OpenTS](https://decisionintelligence.github.io/OpenTS/leaderboards/multivariate_time_series) leaderboard.
+
+Notably, xPatch achieves state-of-the-art performance on the longest and most challenging datasets — Weather, Traffic, and Electricity — across all prediction lengths.
+
+<p align="center">
+<img src="./figures/hyper-fair.png" alt="" style="width: 80%;" align=center />
+</p>
+
 ## Getting Started
 
 1. Install conda environment: ```conda env create -f environment.yml```
 
 2. Download data. You can download the datasets from [Google Driver](https://drive.google.com/u/0/uc?id=1NF7VEefXCmXuWNbnNe858WvQAkJ_7wuP&export=download), [Baidu Driver](https://pan.baidu.com/share/init?surl=r3KhGd0Q9PJIUZdfEYoymg&pwd=i9iy) or [Kaggle Datasets](https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). All datasets are pre-processed and can be used easily. Create a seperate folder ```./dataset``` and put all the files in the directory.
 
-3. Train the model. We provide the experiment scripts of all benchmarks under the folder `./scripts`. The script for unified settings is *xPatch_unified*, while for hyperparameter search you can use *xPatch_search*. You can reproduce the experiments by:
+3. Train the model. We provide the experiment scripts of all benchmarks under the folder `./scripts`. The script for unified settings is *xPatch_unified*, the script for hyperparameter search is *xPatch_search*, while for fair experiment without the "drop-last" trick you can use *xPatch_fair*. You can reproduce the experiments by:
 
 ```
-bash scripts/xPatch_unified.sh
+bash scripts/xPatch_search.sh
 ```
 
 All experiments were conducted on a single Quadro RTX 6000 GPU. You can adjust the hyperparameters based on your needs (e.g. batch size, patch length, lookback windows and prediction lengths, alpha parameter for exponential decomposition). We also provide code for the baseline models and for ablation experiments from Appendix (EMA decomposition, arctangent loss, sigmoid learning rate adjustment scheme, inference time) in ```./ablation```.
@@ -107,6 +119,7 @@ We appreciate the following github repos for their valuable code and effort:
 - iTransformer (https://github.com/thuml/iTransformer)
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
 - RevIN (https://github.com/ts-kim/RevIN)
+- TFB (https://github.com/decisionintelligence/TFB)
 
 ## Contact
 
