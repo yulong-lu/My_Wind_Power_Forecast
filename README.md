@@ -5,7 +5,7 @@
 <div align="center">
 
 [![](https://img.shields.io/badge/arXiv:2412.17323-B31B1B?logo=arxiv)](https://arxiv.org/pdf/2412.17323)
-![](https://img.shields.io/badge/AAAI'25-xPatch-deepgreen)
+[![](https://img.shields.io/badge/AAAI'25-xPatch-deepgreen)](https://ojs.aaai.org/index.php/AAAI/article/view/34270)
 ![](https://img.shields.io/github/last-commit/stitsyuk/xPatch)
 ![](https://badges.pufler.dev/visits/stitsyuk/xPatch)
 ![](https://img.shields.io/github/stars/stitsyuk/xPatch)
