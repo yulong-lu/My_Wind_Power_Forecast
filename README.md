@@ -130,10 +130,13 @@ If you have any questions or concerns, please contact us at stitsyuk@kaist.ac.kr
 If you find this repository useful in your research, please consider citing our paper as follows:
 
 ```
-@inproceedings{Stitsyuk-2025-xPatch,
-  title     = {xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition},
-  author    = {Stitsyuk, Artyom and Choi, Jaesik},
-  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
-  year      = {2025}
+@inproceedings{stitsyuk2025xpatch,
+  title={xPatch: Dual-Stream Time Series Forecasting with Exponential Seasonal-Trend Decomposition},
+  author={Stitsyuk, Artyom and Choi, Jaesik},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={19},
+  pages={20601--20609},
+  year={2025}
 }
 ```
